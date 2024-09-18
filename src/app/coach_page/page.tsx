@@ -3,11 +3,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Send } from "lucide-react"
-import Layout from '../layout'
+
 
 export default function ChatbotCoach() {
   return (
-    <Layout>
+    
     <div className="min-h-screen bg-gray-100">
       <header className="bg-white shadow">
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
@@ -42,6 +42,6 @@ export default function ChatbotCoach() {
         </Card>
       </main>
     </div>
-    </Layout>
+    
   )
 }

@@ -1,6 +1,6 @@
 "use client";
 import React from 'react'
-import Layout from '../layout'
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
@@ -9,7 +9,7 @@ import { BarChart, Calendar, Camera, Plus } from "lucide-react"
 
 export default function Dashboard() {
   return (
-    <Layout>
+    
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <Card className="col-span-full bg-gradient-to-r from-primary to-primary-foreground text-white">
           <CardHeader>
@@ -114,6 +114,6 @@ export default function Dashboard() {
           </CardContent>
         </Card>
       </div>
-    </Layout>
+    
   )
 }

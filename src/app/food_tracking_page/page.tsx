@@ -5,11 +5,11 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Camera, Search } from "lucide-react"
-import Layout from '../layout'
+
 
 export default function FoodTracking() {
   return (
-    <Layout>
+    
     <div className="min-h-screen bg-gray-100">
       <header className="bg-white shadow">
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
@@ -60,6 +60,6 @@ export default function FoodTracking() {
         </Card>
       </main>
     </div>
-    </Layout>
+    
   )
 }
