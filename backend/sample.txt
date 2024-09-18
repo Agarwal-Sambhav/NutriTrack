@@ -1,0 +1,122 @@
+{
+  "analysis_id": "981e5606-3811-4059-ac29-eb1f8f001fae",
+  "items": [
+    {
+      "food": [
+        {
+          "confidence": 1.0,
+          "food_info": {
+            "food_id": "4a4e1d49fb47deae8d45cefd9df24e5a",
+            "fv_grade": "D",
+            "g_per_serving": 300.0,
+            "display_name": "Pasta Carbonara",
+            "quantity": 300.0,
+            "position": {"height": 0.4283, "width": 0.5183, "x": 0.3683, "y": 0.1333},
+            "nutrition": {
+              "alcohol_100g": 0.0,
+              "calcium_100g": 0.0194,
+              "calories_100g": 0.0,
+              "carbs_100g": 0.0,
+              "chloride_100g": None,
+              "cholesterol_100g": 0.0294,
+              "copper_100g": None,
+              "fat_100g": 0.0,
+              "fibers_100g": 0.0,
+              "glycemic_index": 60.0,
+              "insat_fat_100g": 0.965,
+              "iodine_100g": None,
+              "iron_100g": 0.000946,
+              "magnesium_100g": 0.0252,
+              "manganese_100g": None,
+              "mono_fat_100g": 0.748,
+              "omega_3_100g": 0.01209,
+              "omega_6_100g": 0.205,
+              "phosphorus_100g": 0.088,
+              "poly_fat_100g": 0.217,
+              "polyols_100g": None,
+              "potassium_100g": 0.0597,
+              "proteins_100g": 0.0,
+              "salt_100g": None,
+              "sat_fat_100g": 0.411,
+              "selenium_100g": None,
+              "sodium_100g": 0.0406,
+              "sugars_100g": 0.0,
+              "veg_percent": 0.0,
+              "vitamin_a_beta_k_100g": None,
+              "vitamin_a_retinol_100g": None,
+              "vitamin_b12_100g": None,
+              "vitamin_b1_100g": None,
+              "vitamin_b2_100g": None,
+              "vitamin_b3_100g": None,
+              "vitamin_b5_100g": None,
+              "vitamin_b6_100g": None,
+              "vitamin_b9_100g": 9.2e-06,
+              "vitamin_c_100g": 0.0,
+              "vitamin_d_100g": None,
+              "vitamin_e_100g": None,
+              "vitamin_k1_100g": None,
+              "water_100g": None,
+              "zinc_100g": None,
+            },
+          },
+          "ingredients": [  # A list of ingredients composing the food item
+            {
+              "confidence": 1.0,
+              "food_info": {
+                "food_id": "dc2bf7a30d928df24e19acae178a922a",
+                "fv_grade": "C",
+                "g_per_serving": 150.0,
+                "display_name": "Pasta",
+                "nutrition": {
+                  # Nutritional information of the ingredient
+                },
+              },
+              "ingredients": [],
+              "quantity": 150.0,
+            },
+            {
+              "confidence": 1.0,
+              "food_info": {
+                "food_id": "60aa725a34508e0daac3fc8f39aaa98d",
+                "fv_grade": "C",
+                "g_per_serving": 30.0,
+                "display_name": "Low fat sour cream",
+                "nutrition": {
+                  # Nutritional information of the ingredient
+                },
+              },
+              "ingredients": [],
+              "quantity": 40.0,
+            },
+            {
+              "confidence": 1.0,
+              "food_info": {
+                "food_id": "70bbb8f7ad90430d1936d790ed528d5c",
+                "fv_grade": "D",
+                "g_per_serving": 100.0,
+                "display_name": "Diced bacon",
+                "nutrition": {
+                  # Nutritional information of the ingredient
+                },
+              },
+              "ingredients": [],
+              "quantity": 10.0,
+            },
+          ],
+        },
+
+        # ... Other possibilities for this food item
+      ]
+    },
+
+  # ... Other food items
+  ],
+    "scopes": [
+    "multiple_items",
+    "quantity",
+    "nutrition:nutriscore",
+    "nutrition:micro",
+    "position",
+    "nutrition:macro",
+  ],
+}
