@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { Button } from "@/components/ui/button";
+import { Button } from "../components/ui/button";
 import Link from "next/link";
 import { Moon, Sun, User } from "lucide-react";
 import localFont from "next/font/local";
@@ -8,7 +8,7 @@ import "./globals.css";
 import { usePathname } from 'next/navigation';
 import { metadata } from './metadata'; // Ensure this import is correct
 import Head from 'next/head';
-import Navbar from '@/components/Navbar';
+import Navbar from '../components/Navbar';
 import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 
 const geistSans = localFont({
