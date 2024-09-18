@@ -45,66 +45,30 @@ export default function FoodTracking() {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
-      })
-      setResults(response.data)
-      setError('')
-    } catch (error) {
-      setError('Something went wrong. Please try again.')
-    } finally {
-      setIsLoading(false)
-    }
-  }
+      });
+const foodData = response.data;
+    setResults(foodData);
+    setError('');
 
-  const recentlyAddedFoods = [
-    { 
-      name: "Grilled Chicken Salad", 
-      calories: 350, 
-      time: "2 hours ago",
-      nutrients: {
-        protein: 30,
-        carbs: 10,
-        fat: 15,
-        fiber: 5,
-        vitamins: {
-          A: 10,
-          C: 15,
-          D: 5
-        }
-      }
-    },
-    { 
-      name: "Vegetable Stir Fry", 
-      calories: 280, 
-      time: "Yesterday",
-      nutrients: {
-        protein: 15,
-        carbs: 35,
-        fat: 10,
-        fiber: 8,
-        vitamins: {
-          A: 20,
-          C: 25,
-          K: 15
-        }
-      }
-    },
-    { 
-      name: "Fruit Smoothie", 
-      calories: 200, 
-      time: "2 days ago",
-      nutrients: {
-        protein: 5,
-        carbs: 40,
-        fat: 2,
-        fiber: 6,
-        vitamins: {
-          C: 50,
-          B6: 10,
-          E: 8
-        }
-      }
-    },
-  ]
+    // Send each food item to the Next.js API route for saving
+    for (const item of foodData) {
+      await axios.post('src/app/api/food/index.js', {
+        name: item.name,
+        calories: item.calories,
+      });
+    }
+  } catch (error) {
+    setError('Something went wrong. Please try again.');
+  }
+};
+      // const foodData = response.data;
+// const foodData = response.data;
+//       setResults(foodData);
+//       setError('');
+//     } catch (error) {
+//       setError('Something went wrong. Please try again.');
+//     }
+//   };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -202,23 +166,14 @@ export default function FoodTracking() {
                   >
                     <h2 className="text-xl font-semibold mb-4">Analysis Results:</h2>
                     {results.map((item, index) => (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.3, delay: index * 0.1 }}
-                        className="mb-4 p-4 border rounded-md bg-white shadow-sm hover:shadow-md transition-shadow duration-300"
-                      >
-                        <h3 className="font-medium text-lg text-gray-800">{item.name}</h3>
-                        <p className="text-gray-600">Calories: {item.calories.toFixed(2)}</p>
-                        <div className="mt-2 flex flex-wrap gap-2">
-                          {Object.entries(item.nutrients || {}).map(([nutrient, value]) => (
-                            <span key={nutrient} className="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-xs">
-                              {nutrient}: {value.toFixed(2)}g
-                            </span>
-                          ))}
-                        </div>
-                      </motion.div>
+                      <div key={index} className="mt-2 p-2 border rounded bg-white">
+                        
+                        <h3 className="font-medium">{item.name}</h3>
+                        <p>Calories: {item.calories.toFixed(2)}</p>
+                         {/* <p>Fats: {item.fats}</p>
+                         <p>Carbs: {item.carbs}</p>
+                         <p>Protein: {item.protein}</p> */}
+                      </div>
                     ))}
                   </motion.div>
                 )}

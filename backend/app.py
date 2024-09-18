@@ -39,8 +39,11 @@ def upload_image():
                 food_info = food_item.get('food_info', {})
                 result.append({
                     "name": food_info.get('display_name', 'Unknown'),
-                    "calories": food_info.get('nutrition', {}).get('calories_100g', 0) * food_item.get('quantity', 0) / 100
-                    "fats": food_info.get ('nutrition', {}).get('fat_100g', 0) * food_item.get('quantity', 0) / 100
+                    "calories": food_info.get('nutrition', {}).get('calories_100g', 0) * food_item.get('quantity', 0) / 100,
+                    "fats": food_info.get ('nutrition', {}).get('fat_100g', 0) * food_item.get('quantity', 0) / 100,
+                    "carbs ": food_info.get ('nutrition', {}).get('carbs_100g', 0) * food_item.get('quantity', 0) / 100,
+                    "protein ": food_info.get ('nutrition', {}).get('proteins_100g', 0) * food_item.get('quantity', 0) / 100
+                    
                 })
             
             return jsonify(result), 200
