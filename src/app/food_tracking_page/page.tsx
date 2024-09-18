@@ -87,6 +87,7 @@ export default function FoodTracking() {
                       <div key={index} className="mt-2 p-2 border rounded bg-white">
                         <h3 className="font-medium">{item.name}</h3>
                         <p>Calories: {item.calories.toFixed(2)}</p>
+                  
                       </div>
                     ))}
                   </div>
