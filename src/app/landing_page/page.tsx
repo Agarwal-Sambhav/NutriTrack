@@ -228,7 +228,13 @@ export default function LandingPage() {
   )
 }
 
-function FeatureCard({ icon, title, description }) {
+interface FeatureCardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+
+function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
     <Card className="flex flex-col items-center text-center p-6 hover:shadow-lg transition-shadow duration-300">
       <CardContent>
@@ -242,7 +248,13 @@ function FeatureCard({ icon, title, description }) {
   )
 }
 
-function TestimonialCard({ quote, author, role }) {
+interface TestimonialCardProps {
+  quote: string;
+  author: string;
+  role: string;
+}
+
+function TestimonialCard({ quote, author, role }: TestimonialCardProps) {
   return (
     <Card className="p-6 hover:shadow-lg transition-shadow duration-300">
       <CardContent>
@@ -259,7 +271,13 @@ function TestimonialCard({ quote, author, role }) {
   )
 }
 
-function BenefitCard({ icon, title, description }) {
+interface BenefitCardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+
+function BenefitCard({ icon, title, description }: BenefitCardProps) {
   return (
     <div className="flex items-start">
       <div className="flex-shrink-0 mr-4">
