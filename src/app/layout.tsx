@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { Button } from "@/components/ui/button";
+import { Button } from "../components/ui/button";
 import Link from "next/link";
 import { Moon, Sun, User } from "lucide-react";
 import localFont from "next/font/local";
