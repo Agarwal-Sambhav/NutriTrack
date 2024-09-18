@@ -32,12 +32,29 @@ export default function FoodTracking() {
           'Content-Type': 'multipart/form-data',
         },
       });
-      setResults(response.data);
-      setError('');
-    } catch (error) {
-      setError('Something went wrong. Please try again.');
+const foodData = response.data;
+    setResults(foodData);
+    setError('');
+
+    // Send each food item to the Next.js API route for saving
+    for (const item of foodData) {
+      await axios.post('src/app/api/food/index.js', {
+        name: item.name,
+        calories: item.calories,
+      });
     }
-  };
+  } catch (error) {
+    setError('Something went wrong. Please try again.');
+  }
+};
+      // const foodData = response.data;
+// const foodData = response.data;
+//       setResults(foodData);
+//       setError('');
+//     } catch (error) {
+//       setError('Something went wrong. Please try again.');
+//     }
+//   };
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -85,9 +102,12 @@ export default function FoodTracking() {
                     <h2 className="text-lg font-semibold">Results:</h2>
                     {results.map((item, index) => (
                       <div key={index} className="mt-2 p-2 border rounded bg-white">
+                        
                         <h3 className="font-medium">{item.name}</h3>
                         <p>Calories: {item.calories.toFixed(2)}</p>
-                  
+                         {/* <p>Fats: {item.fats}</p>
+                         <p>Carbs: {item.carbs}</p>
+                         <p>Protein: {item.protein}</p> */}
                       </div>
                     ))}
                   </div>
